@@ -38,7 +38,7 @@ namespace GEEKSHOPPING.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProductVO>> Create(ProductVO model)
+        public async Task<ActionResult<ProductVO>> Create([FromBody]ProductVO model)
         {
             if (model == null)
                 return BadRequest();
@@ -48,7 +48,7 @@ namespace GEEKSHOPPING.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<ProductVO>> Update(ProductVO model)
+        public async Task<ActionResult<ProductVO>> Update([FromBody] ProductVO model)
         {
             if (model == null)
                 return BadRequest();
